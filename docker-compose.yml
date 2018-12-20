@@ -9,8 +9,8 @@ services:
       volumes:
         - /docker-volumes/etc/letsencrypt/live/nicocourts.com/fullchain.pem:/etc/letsencrypt/live/nicocourts.com/fullchain.pem
         - /docker-volumes/etc/letsencrypt/live/nicocourts.com/privkey.pem:/etc/letsencrypt/live/nicocourts.com/privkey.pem
-        - /docker-volumes/etc/letsencrypt/live/www.nicocourts.com/fullchain.pem:/etc/letsencrypt/live/www.nicocourts.com/fullchain.pem
-        - /docker-volumes/etc/letsencrypt/live/www.nicocourts.com/privkey.pem:/etc/letsencrypt/live/www.nicocourts.com/privkey.pem
+        - /docker-volumes/etc/letsencrypt/live/4n1.co/fullchain.pem:/etc/letsencrypt/live/www.nicocourts.com/fullchain.pem
+        - /docker-volumes/etc/letsencrypt/live/4n1.co/privkey.pem:/etc/letsencrypt/live/www.nicocourts.com/privkey.pem
       networks:
         - docker-network
 
