@@ -1,18 +1,22 @@
 version: '3.1'
 
 services:
-    website:
-      image: nicocourts/website:latest
-      ports:
-        - "80:80"
-        - "443:443"
-      volumes:
-        - /docker-volumes/etc/letsencrypt/live/nicocourts.com/fullchain.pem:/etc/letsencrypt/live/nicocourts.com/fullchain.pem
-        - /docker-volumes/etc/letsencrypt/live/nicocourts.com/privkey.pem:/etc/letsencrypt/live/nicocourts.com/privkey.pem
-        - /docker-volumes/etc/letsencrypt/live/4n1.co/fullchain.pem:/etc/letsencrypt/live/www.nicocourts.com/fullchain.pem
-        - /docker-volumes/etc/letsencrypt/live/4n1.co/privkey.pem:/etc/letsencrypt/live/www.nicocourts.com/privkey.pem
-      networks:
-        - docker-network
+  website:
+    image: nicocourts/website:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /docker-volumes/etc/letsencrypt/live/nicocourts.com/fullchain.pem:/etc/letsencrypt/live/nicocourts.com/fullchain.pem
+      - /docker-volumes/etc/letsencrypt/live/nicocourts.com/privkey.pem:/etc/letsencrypt/live/nicocourts.com/privkey.pem
+      - /docker-volumes/etc/letsencrypt/live/4n1.co/fullchain.pem:/etc/letsencrypt/live/www.nicocourts.com/fullchain.pem
+      - /docker-volumes/etc/letsencrypt/live/4n1.co/privkey.pem:/etc/letsencrypt/live/www.nicocourts.com/privkey.pem
+    networks:
+      - docker-network
+  api:
+    image: nicocourts/server:latest
+    networks:
+      - docker-network
 
 networks:
   docker-network:
