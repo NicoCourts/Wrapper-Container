@@ -17,8 +17,11 @@ services:
   
   api:
     image: nicocourts/server:latest
+    volumes:
+      - /home/omfg_lag/pki/public.pem:/etc/pki/public.pem
+      - /home/omfg_lag/pki/private.pem:/etc/pki/private.pem
 
   mongodb:
     image: mongo:latest
     volumes:
-      - ./home/omfg_lag/db:/data/db
+      - /home/omfg_lag/db:/data/db
