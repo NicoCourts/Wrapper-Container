@@ -9,10 +9,15 @@ services:
     volumes:
       - /docker-volumes/etc/letsencrypt/live/nicocourts.com/fullchain.pem:/etc/letsencrypt/live/nicocourts.com/fullchain.pem
       - /docker-volumes/etc/letsencrypt/live/nicocourts.com/privkey.pem:/etc/letsencrypt/live/nicocourts.com/privkey.pem
-      - /docker-volumes/etc/letsencrypt/live/4n1.co/fullchain.pem:/etc/letsencrypt/live/www.nicocourts.com/fullchain.pem
-      - /docker-volumes/etc/letsencrypt/live/4n1.co/privkey.pem:/etc/letsencrypt/live/www.nicocourts.com/privkey.pem
+      - /docker-volumes/etc/letsencrypt/live/4n1.co/fullchain.pem:/etc/letsencrypt/live/4n1.co/fullchain.pem
+      - /docker-volumes/etc/letsencrypt/live/4n1.co/privkey.pem:/etc/letsencrypt/live/4n1.co/privkey.pem
+      - /docker-volumes/etc/letsencrypt/live/api.nicocourts.com/fullchain.pem:/etc/letsencrypt/live/api.nicocourts.com/fullchain.pem
+      - /docker-volumes/etc/letsencrypt/live/api.nicocourts.com/privkey.pem:/etc/letsencrypt/live/api.nicocourts.com/privkey.pem
+  
+  
   api:
     image: nicocourts/server:latest
+
   mongodb:
     image: mongo:latest
     volumes:
