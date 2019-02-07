@@ -13,6 +13,7 @@ services:
       - /docker-volumes/etc/letsencrypt/live/4n1.co/privkey.pem:/etc/letsencrypt/live/4n1.co/privkey.pem
       - /docker-volumes/etc/letsencrypt/live/api.nicocourts.com/fullchain.pem:/etc/letsencrypt/live/api.nicocourts.com/fullchain.pem
       - /docker-volumes/etc/letsencrypt/live/api.nicocourts.com/privkey.pem:/etc/letsencrypt/live/api.nicocourts.com/privkey.pem
+      - /home/omfg_lag/img:/usr/share/nginx/html/img
   
   
   api:
@@ -20,6 +21,7 @@ services:
     volumes:
       - /home/omfg_lag/pki/public.pem:/etc/pki/public.pem
       - /home/omfg_lag/pki/private.pem:/etc/pki/private.pem
+      - /home/omfg_lag/img:/etc/img
 
   mongodb:
     image: mongo:latest
