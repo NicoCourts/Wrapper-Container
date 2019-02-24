@@ -14,6 +14,7 @@ services:
       - /docker-volumes/etc/letsencrypt/live/api.nicocourts.com/fullchain.pem:/etc/letsencrypt/live/api.nicocourts.com/fullchain.pem
       - /docker-volumes/etc/letsencrypt/live/api.nicocourts.com/privkey.pem:/etc/letsencrypt/live/api.nicocourts.com/privkey.pem
       - /home/omfg_lag/img:/usr/share/nginx/html/img
+      - /home/omfg_lag/.well-known/acme-challenge:/usr/share/nginx/html/.well-known/acme-challenge
   
   
   api:
