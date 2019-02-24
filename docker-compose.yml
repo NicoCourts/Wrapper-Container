@@ -23,6 +23,7 @@ services:
       - /home/omfg_lag/pki/public.pem:/etc/pki/public.pem
       - /home/omfg_lag/pki/private.pem:/etc/pki/private.pem
       - /home/omfg_lag/img:/etc/img
+      - /home/omfg_lag/.well-known/acme-challenge:/usr/share/nginx/html/.well-known/acme-challenge
 
   mongodb:
     image: mongo:latest
